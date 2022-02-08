@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#product">PRODUCT</a></li>
+            <li><a href="#gallery">GALLERY</a> </li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#inventory">MY INVENTORY</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="bio">
+            <div class="left-side">
+                <div class="user-image">
+                    <img src="./asset/raka.jpg" alt="pas-foto" class="foto-raka">
+                </div>
+                <div class="bio-nama">
+                    <div class="profile-name">
+                        <span style="font-size: 2vw;font-weight: bold;" id="bio-nama"></span>
+                        <span style="font-size: 1.5vw;" id="bio-role"></span>
+                    </div>
+                    <div class="button-profile">
+                        <button class="button-kontak">Kontak</button>
+                        <button class="button-resume">Resume</button>
+                    </div>
+                </div>
+            </div>
+            <div class="garis-vertikal"></div>
+            <div class="data-profile">
+                <table>
+                    <tr>
+                        <td><b>Availability</b> </td>
+                        <td id="bio-availability"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Usia</b> </td>
+                        <td id="bio-age"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Lokasi</b> </td>
+                        <td id="bio-lokasi"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Pengalaman</b> </td>
+                        <td id="bio-years-experience"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Email</b> </td>
+                        <td id="bio-email"></td>
+                    </tr>
+                </table>
+            </div>        
+        </div>
+
+        <div class="formulir">
+            <form class="form-fill">
+                <label for="nama">Nama</label> <br>
+                <input type="text" name="nama" id="nama"><br>
+                
+                <label for="role">Role</label> <br>
+                <input type="text" name="role" id="role"> <br>
+        
+                <label for="availability">Availability</label> <br>
+                <input type="text" name="availability" id="availability"> <br>
+        
+                <label for="age">Age</label> <br>
+                <input type="text" name="age" id="age"> <br>
+        
+                <label for="lokasi">Lokasi</label> <br>
+                <input type="text" name="lokasi" id="lokasi"> <br>
+        
+                <label for="years-experience">Years Experience</label> <br>
+                <input type="text" name="years-experience" id="years-experience"> <br>
+        
+                <label for="email">Email</label> <br>
+                <input type="text" name="email" id="email"> <br>
+        
+                <button onclick="onSubmit();return false;" class="button-simpan">SUBMIT</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script >
+        function onSubmit(){
+            var nama = document.getElementById("nama").value;
+            var role = document.getElementById("role").value;
+            var availability = document.getElementById("availability").value;
+            var age = document.getElementById("age").value;
+            var lokasi = document.getElementById("lokasi").value;
+            var years = document.getElementById("years-experience").value;
+            var email = document.getElementById("email").value;
+            console.log(nama);
+        
+            document.getElementById('bio-nama').innerHTML = nama;
+            document.getElementById('bio-role').innerHTML = role;
+            document.getElementById('bio-availability').innerHTML = availability;
+            document.getElementById('bio-age').innerHTML = age;
+            document.getElementById('bio-lokasi').innerHTML = lokasi;
+            document.getElementById('bio-years-experience').innerHTML = years;
+            document.getElementById('bio-email').innerHTML = email;
+        
+            console.log("berhasil");
+        }
+    </script>
+</body>
+</html>
